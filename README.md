@@ -32,7 +32,8 @@ Fråga → Researcher → Analyst → Writer → Reviewer → Rapport
 
 ## Kom igång (Windows)
 
-1. Installera [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+1. Installera [Docker Desktop](https://www.docker.com/products/docker-desktop/) och hämta koden:
+   `git clone https://github.com/Khalid1754/AgentFlow.API.git`
 2. Dubbelklicka på `start.bat`. Första gången skapas `.env` och öppnas i Anteckningar:
    lägg in din `GROQ_API_KEY` (gratis på https://console.groq.com/keys), spara och kör `start.bat` igen.
 3. Appen öppnas på http://localhost:8090. `stopp.bat` stoppar den.

@@ -18,7 +18,7 @@ builder.Services.AddSingleton<ILlm>(sp => sp.GetRequiredService<GroqLlm>());
 builder.Services.AddHttpClient("search", c =>
 {
     c.Timeout = TimeSpan.FromSeconds(20);
-    c.DefaultRequestHeaders.UserAgent.ParseAdd("AgentFlow/1.0 (https://github.com/khalid1754/agentflow)");
+    c.DefaultRequestHeaders.UserAgent.ParseAdd("AgentFlow/1.0 (https://github.com/Khalid1754/AgentFlow.API)");
 });
 foreach (var language in builder.Configuration.GetSection("Search:WikipediaLanguages").Get<string[]>() ?? ["sv", "en"])
     builder.Services.AddSingleton<ISearchSource>(sp => new WikipediaSearch(sp.GetRequiredService<IHttpClientFactory>().CreateClient("search"), language));
